@@ -18,14 +18,17 @@ import com.fincatto.nfe310.webservices.gerado.RecepcaoEventoStub.NfeDadosMsg;
 import com.fincatto.nfe310.webservices.gerado.RecepcaoEventoStub.NfeRecepcaoEventoResult;
 import org.apache.axiom.om.OMElement;
 import org.apache.axiom.om.util.AXIOMUtil;
-import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.Collections;
 
 class WSCancelamento {
+
     private static final String DESCRICAO_EVENTO = "Cancelamento";
     private static final BigDecimal VERSAO_LEIAUTE = new BigDecimal("1.00");
     private static final String EVENTO_CANCELAMENTO = "110111";
@@ -87,7 +90,7 @@ class WSCancelamento {
         infoEvento.setAmbiente(this.config.getAmbiente());
         infoEvento.setChave(chaveAcesso);
         infoEvento.setCnpj(chaveParser.getCnpjEmitente());
-        infoEvento.setDataHoraEvento(DateTime.now());
+        infoEvento.setDataHoraEvento(ZonedDateTime.now());
         infoEvento.setId(String.format("ID%s%s0%s", WSCancelamento.EVENTO_CANCELAMENTO, chaveAcesso, "1"));
         infoEvento.setNumeroSequencialEvento(1);
         infoEvento.setOrgao(chaveParser.getNFUnidadeFederativa());
@@ -101,7 +104,7 @@ class WSCancelamento {
 
         final NFEnviaEventoCancelamento enviaEvento = new NFEnviaEventoCancelamento();
         enviaEvento.setEvento(Collections.singletonList(evento));
-        enviaEvento.setIdLote(Long.toString(DateTime.now().getMillis()));
+        enviaEvento.setIdLote(Long.toString(LocalDateTime.now().atZone(ZoneId.systemDefault()).toEpochSecond()));
         enviaEvento.setVersao(WSCancelamento.VERSAO_LEIAUTE);
         return enviaEvento;
     }

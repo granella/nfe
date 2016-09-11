@@ -1,12 +1,12 @@
 package com.fincatto.nfe310.classes.evento.cancelamento;
 
-import org.joda.time.LocalDateTime;
 import org.junit.Assert;
 import org.junit.Test;
 
 import com.fincatto.nfe310.classes.NFAmbiente;
 import com.fincatto.nfe310.classes.NFUnidadeFederativa;
 import com.fincatto.nfe310.classes.nota.assinatura.NFSignature;
+import java.time.LocalDateTime;
 
 public class NFRetornoInfoCancelamentoTest {
 
@@ -37,7 +37,7 @@ public class NFRetornoInfoCancelamentoTest {
     @Test
     public void deveObterDataHoraRecebimentoComoFoiSetado() {
         final NFRetornoInfoCancelamento retornoInfoCancelamento = new NFRetornoInfoCancelamento();
-        final LocalDateTime dataHoraRecebimento = new LocalDateTime(2010, 10, 10, 10, 10, 10);
+        final LocalDateTime dataHoraRecebimento = LocalDateTime.of(2010, 10, 10, 10, 10, 10);
         retornoInfoCancelamento.setDatahoraRecebimento(dataHoraRecebimento);
         Assert.assertEquals(dataHoraRecebimento, retornoInfoCancelamento.getDatahoraRecebimento());
     }

@@ -2,14 +2,15 @@ package com.fincatto.nfe310.classes.nota;
 
 import java.math.BigDecimal;
 
-import org.joda.time.LocalDate;
 import org.simpleframework.xml.Element;
 
 import com.fincatto.nfe310.classes.NFBase;
 import com.fincatto.nfe310.validadores.BigDecimalParser;
 import com.fincatto.nfe310.validadores.StringValidador;
+import java.time.LocalDate;
 
 public class NFNotaInfoDuplicata extends NFBase {
+
     @Element(name = "nDup", required = false)
     private String numeroDuplicata;
 

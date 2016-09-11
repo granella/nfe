@@ -1,12 +1,12 @@
 package com.fincatto.nfe310.classes.evento;
 
-import org.joda.time.LocalDateTime;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 
 import com.fincatto.nfe310.classes.NFAmbiente;
 import com.fincatto.nfe310.classes.NFBase;
 import com.fincatto.nfe310.classes.NFUnidadeFederativa;
+import java.time.LocalDateTime;
 
 public class NFInfoEventoRetorno extends NFBase {
 

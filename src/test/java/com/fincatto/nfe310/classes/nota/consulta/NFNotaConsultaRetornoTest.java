@@ -3,8 +3,6 @@ package com.fincatto.nfe310.classes.nota.consulta;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.joda.time.LocalDateTime;
-import org.joda.time.format.DateTimeFormat;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -13,6 +11,8 @@ import com.fincatto.nfe310.classes.NFAmbiente;
 import com.fincatto.nfe310.classes.NFProtocolo;
 import com.fincatto.nfe310.classes.NFUnidadeFederativa;
 import com.fincatto.nfe310.classes.evento.cancelamento.NFRetornoCancelamento;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class NFNotaConsultaRetornoTest {
 
@@ -43,7 +43,7 @@ public class NFNotaConsultaRetornoTest {
     @Test
     public void deveObterDataHoraReciboComoFoiSetado() {
         final NFNotaConsultaRetorno consultaRetorno = new NFNotaConsultaRetorno();
-        final LocalDateTime dataHoraRecibo = LocalDateTime.parse("2010-10-10 10:10:10", DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss")); 
+        final LocalDateTime dataHoraRecibo = LocalDateTime.parse("2010-10-10 10:10:10", DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         consultaRetorno.setDataHoraRecibo(dataHoraRecibo);
         Assert.assertEquals(dataHoraRecibo, consultaRetorno.getDataHoraRecibo());
     }

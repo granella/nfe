@@ -4,11 +4,13 @@ import com.fincatto.nfe310.FabricaDeObjetosFake;
 import com.fincatto.nfe310.classes.NFAmbiente;
 import com.fincatto.nfe310.classes.NFUnidadeFederativa;
 import com.fincatto.nfe310.classes.evento.NFInfoEvento;
-import org.joda.time.DateTime;
+
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 public class NFInfoEventoCartaCorrecaoTest {
 
@@ -36,7 +38,7 @@ public class NFInfoEventoCartaCorrecaoTest {
         infoEvento.setDadosEvento(FabricaDeObjetosFake.getNFInfoCartaCorrecao());
         infoEvento.setChave("81568004734874930428983724940883089298523837");
         infoEvento.setCnpj("02224343323426");
-        infoEvento.setDataHoraEvento(new DateTime(2014, 1, 1, 10, 10, 10));
+        infoEvento.setDataHoraEvento(LocalDateTime.of(2014, 1, 1, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         infoEvento.setId("ID1101108156800473487493042898372494088308929852383799");
         infoEvento.setNumeroSequencialEvento(99);
         infoEvento.setOrgao(NFUnidadeFederativa.SC);
@@ -51,7 +53,7 @@ public class NFInfoEventoCartaCorrecaoTest {
         infoEvento.setAmbiente(NFAmbiente.HOMOLOGACAO);
         infoEvento.setChave("81568004734874930428983724940883089298523837");
         infoEvento.setCnpj("02224343323426");
-        infoEvento.setDataHoraEvento(new DateTime(2014, 1, 1, 10, 10, 10));
+        infoEvento.setDataHoraEvento(LocalDateTime.of(2014, 1, 1, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         infoEvento.setId("ID1101108156800473487493042898372494088308929852383799");
         infoEvento.setNumeroSequencialEvento(99);
         infoEvento.setOrgao(NFUnidadeFederativa.SC);
@@ -66,7 +68,7 @@ public class NFInfoEventoCartaCorrecaoTest {
         infoEvento.setAmbiente(NFAmbiente.HOMOLOGACAO);
         infoEvento.setDadosEvento(FabricaDeObjetosFake.getNFInfoCartaCorrecao());
         infoEvento.setCnpj("02224343323426");
-        infoEvento.setDataHoraEvento(new DateTime(2014, 1, 1, 10, 10, 10));
+        infoEvento.setDataHoraEvento(LocalDateTime.of(2014, 1, 1, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         infoEvento.setId("ID1101108156800473487493042898372494088308929852383799");
         infoEvento.setNumeroSequencialEvento(99);
         infoEvento.setOrgao(NFUnidadeFederativa.SC);
@@ -81,7 +83,7 @@ public class NFInfoEventoCartaCorrecaoTest {
         infoEvento.setAmbiente(NFAmbiente.HOMOLOGACAO);
         infoEvento.setDadosEvento(FabricaDeObjetosFake.getNFInfoCartaCorrecao());
         infoEvento.setChave("81568004734874930428983724940883089298523837");
-        infoEvento.setDataHoraEvento(new DateTime(2014, 1, 1, 10, 10, 10));
+        infoEvento.setDataHoraEvento(LocalDateTime.of(2014, 1, 1, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         infoEvento.setId("ID1101108156800473487493042898372494088308929852383799");
         infoEvento.setNumeroSequencialEvento(99);
         infoEvento.setOrgao(NFUnidadeFederativa.SC);
@@ -112,7 +114,7 @@ public class NFInfoEventoCartaCorrecaoTest {
         infoEvento.setDadosEvento(FabricaDeObjetosFake.getNFInfoCartaCorrecao());
         infoEvento.setChave("81568004734874930428983724940883089298523837");
         infoEvento.setCnpj("02224343323426");
-        infoEvento.setDataHoraEvento(new DateTime(2014, 1, 1, 10, 10, 10));
+        infoEvento.setDataHoraEvento(LocalDateTime.of(2014, 1, 1, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         infoEvento.setNumeroSequencialEvento(99);
         infoEvento.setOrgao(NFUnidadeFederativa.SC);
         infoEvento.setTipoEvento("110110");
@@ -127,7 +129,7 @@ public class NFInfoEventoCartaCorrecaoTest {
         infoEvento.setDadosEvento(FabricaDeObjetosFake.getNFInfoCartaCorrecao());
         infoEvento.setChave("81568004734874930428983724940883089298523837");
         infoEvento.setCnpj("02224343323426");
-        infoEvento.setDataHoraEvento(new DateTime(2014, 1, 1, 10, 10, 10));
+        infoEvento.setDataHoraEvento(LocalDateTime.of(2014, 1, 1, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         infoEvento.setId("ID1101108156800473487493042898372494088308929852383799");
         infoEvento.setOrgao(NFUnidadeFederativa.SC);
         infoEvento.setTipoEvento("110110");
@@ -142,7 +144,7 @@ public class NFInfoEventoCartaCorrecaoTest {
         infoEvento.setDadosEvento(FabricaDeObjetosFake.getNFInfoCartaCorrecao());
         infoEvento.setChave("81568004734874930428983724940883089298523837");
         infoEvento.setCnpj("02224343323426");
-        infoEvento.setDataHoraEvento(new DateTime(2014, 1, 1, 10, 10, 10));
+        infoEvento.setDataHoraEvento(LocalDateTime.of(2014, 1, 1, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         infoEvento.setId("ID1101108156800473487493042898372494088308929852383799");
         infoEvento.setNumeroSequencialEvento(99);
         infoEvento.setTipoEvento("110110");
@@ -157,7 +159,7 @@ public class NFInfoEventoCartaCorrecaoTest {
         infoEvento.setDadosEvento(FabricaDeObjetosFake.getNFInfoCartaCorrecao());
         infoEvento.setChave("81568004734874930428983724940883089298523837");
         infoEvento.setCnpj("02224343323426");
-        infoEvento.setDataHoraEvento(new DateTime(2014, 1, 1, 10, 10, 10));
+        infoEvento.setDataHoraEvento(LocalDateTime.of(2014, 1, 1, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         infoEvento.setId("ID1101108156800473487493042898372494088308929852383799");
         infoEvento.setNumeroSequencialEvento(99);
         infoEvento.setOrgao(NFUnidadeFederativa.SC);
@@ -172,7 +174,7 @@ public class NFInfoEventoCartaCorrecaoTest {
         infoEvento.setDadosEvento(FabricaDeObjetosFake.getNFInfoCartaCorrecao());
         infoEvento.setChave("81568004734874930428983724940883089298523837");
         infoEvento.setCnpj("02224343323426");
-        infoEvento.setDataHoraEvento(new DateTime(2014, 1, 1, 10, 10, 10));
+        infoEvento.setDataHoraEvento(LocalDateTime.of(2014, 1, 1, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         infoEvento.setId("ID1101108156800473487493042898372494088308929852383799");
         infoEvento.setNumeroSequencialEvento(99);
         infoEvento.setOrgao(NFUnidadeFederativa.SC);

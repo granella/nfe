@@ -1,19 +1,18 @@
 package com.fincatto.nfe310.classes.cadastro;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.List;
 
-import org.joda.time.LocalDateTime;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 
 import com.fincatto.nfe310.classes.NFBase;
 import com.fincatto.nfe310.classes.NFUnidadeFederativa;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class NFRetornoConsultaCadastroDados extends NFBase {
 
-    private static final SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
 
     @Element(name = "verAplic", required = true)
     private String versaoAplicacao;
@@ -102,15 +101,11 @@ public class NFRetornoConsultaCadastroDados extends NFBase {
     }
 
     public LocalDateTime getDataHoraProcessamento() {
-        try {
-            return LocalDateTime.fromDateFields(NFRetornoConsultaCadastroDados.DATE_FORMATTER.parse(this.dataHoraProcessamento));
-        } catch (final ParseException e) {
-            throw new IllegalStateException("Houve um problema em parsear a data");
-        }
+        return LocalDateTime.parse(dataHoraProcessamento, DATE_FORMATTER);
     }
 
     public void setDataHoraProcessamento(final LocalDateTime dataHoraProcessamento) {
-        this.dataHoraProcessamento = NFRetornoConsultaCadastroDados.DATE_FORMATTER.format(dataHoraProcessamento.toDate());
+        this.dataHoraProcessamento = DATE_FORMATTER.format(dataHoraProcessamento);
     }
 
     public NFUnidadeFederativa getUfAutorizadora() {

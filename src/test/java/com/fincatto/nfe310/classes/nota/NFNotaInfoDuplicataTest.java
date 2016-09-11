@@ -1,11 +1,11 @@
 package com.fincatto.nfe310.classes.nota;
 
 import com.fincatto.nfe310.FabricaDeObjetosFake;
-import org.joda.time.LocalDate;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 public class NFNotaInfoDuplicataTest {
 
@@ -17,7 +17,7 @@ public class NFNotaInfoDuplicataTest {
     @Test(expected = IllegalStateException.class)
     public void naoDevePermitirValorDuplicataNulo() {
         final NFNotaInfoDuplicata duplicata = new NFNotaInfoDuplicata();
-        duplicata.setDataVencimento(new LocalDate(2014, 7, 10));
+        duplicata.setDataVencimento(LocalDate.of(2014, 7, 10));
         duplicata.setNumeroDuplicata("TQ49cyOL5KtBAUTF0LShhThpUbtCK1fQH1PH4AMcKzMNLxyDbV957IRhWK8Z");
         duplicata.toString();
     }
@@ -25,7 +25,7 @@ public class NFNotaInfoDuplicataTest {
     @Test
     public void devePermitirNumeroDuplicataNulo() {
         final NFNotaInfoDuplicata duplicata = new NFNotaInfoDuplicata();
-        duplicata.setDataVencimento(new LocalDate(2014, 7, 10));
+        duplicata.setDataVencimento(LocalDate.of(2014, 7, 10));
         duplicata.setValorDuplicata(new BigDecimal("999999.99"));
         duplicata.toString();
     }

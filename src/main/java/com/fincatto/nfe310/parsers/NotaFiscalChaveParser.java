@@ -3,8 +3,8 @@ package com.fincatto.nfe310.parsers;
 import com.fincatto.nfe310.classes.NFModelo;
 import com.fincatto.nfe310.classes.NFTipoEmissao;
 import com.fincatto.nfe310.classes.NFUnidadeFederativa;
+import java.time.LocalDate;
 import org.apache.commons.lang3.StringUtils;
-import org.joda.time.LocalDate;
 
 public class NotaFiscalChaveParser {
 
@@ -22,7 +22,7 @@ public class NotaFiscalChaveParser {
     }
 
     public LocalDate getDataEmissao() {
-        return new LocalDate(this.getDataEmissaoAno(), this.getDataEmissaoMes(), 1);
+        return LocalDate.of(this.getDataEmissaoAno(), this.getDataEmissaoMes(), 1);
     }
 
     private int getDataEmissaoMes() {

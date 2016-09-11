@@ -1,21 +1,21 @@
 package com.fincatto.nfe310.transformers;
 
-import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
-import org.joda.time.LocalDateTime;
 import org.simpleframework.xml.transform.Transform;
 
 class NFLocalDateTimeTransformer implements Transform<LocalDateTime> {
 
-    private static final SimpleDateFormat DATETIME_FORMATTER = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX");
+    private static final DateTimeFormatter DATETIME_FORMATTER = DateTimeFormatter.ISO_DATE_TIME;
 
     @Override
     public LocalDateTime read(final String data) throws Exception {
-        return LocalDateTime.fromDateFields(NFLocalDateTimeTransformer.DATETIME_FORMATTER.parse(data));
+        return LocalDateTime.parse(data, DATETIME_FORMATTER);
     }
 
     @Override
     public String write(final LocalDateTime data) throws Exception {
-        return NFLocalDateTimeTransformer.DATETIME_FORMATTER.format(data.toDate());
+        return DATETIME_FORMATTER.format(data);
     }
 }

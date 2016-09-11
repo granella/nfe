@@ -3,7 +3,6 @@ package com.fincatto.nfe310.classes.nota;
 import java.math.BigDecimal;
 import java.util.List;
 
-import org.joda.time.LocalDate;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 
@@ -11,6 +10,7 @@ import com.fincatto.nfe310.classes.NFBase;
 import com.fincatto.nfe310.classes.NFUnidadeFederativa;
 import com.fincatto.nfe310.validadores.BigDecimalParser;
 import com.fincatto.nfe310.validadores.StringValidador;
+import java.time.LocalDate;
 
 public class NFNotaInfoItemProdutoDeclaracaoImportacao extends NFBase {
 

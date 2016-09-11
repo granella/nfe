@@ -1,27 +1,28 @@
 package com.fincatto.nfe310.transformers;
 
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 
-import org.joda.time.LocalDate;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 import org.simpleframework.xml.transform.Transform;
 
 class NFLocalDateTransformer implements Transform<LocalDate> {
-    private static final SimpleDateFormat SIMPLE_DATE_FORMATTER = new SimpleDateFormat("yyyy-MM-ddXXX");
-    private static final DateTimeFormatter DATETIME_FORMATTER = DateTimeFormat.forPattern("yyyy-MM-dd");
+
+    private static final DateTimeFormatter DATE_FORMATTER_WITH_TIMEZONE = DateTimeFormatter.ISO_OFFSET_DATE;
+    private static final DateTimeFormatter DATETIME_FORMATTER = DateTimeFormatter.ISO_LOCAL_DATE;
 
     @Override
     public LocalDate read(final String data) throws Exception {
-        try {
-            return LocalDate.parse(data, NFLocalDateTransformer.DATETIME_FORMATTER);
-        } catch (final IllegalArgumentException e) {
-            return LocalDate.fromDateFields(NFLocalDateTransformer.SIMPLE_DATE_FORMATTER.parse(data));
-        }
+        DateTimeFormatter dateTimeFormatter = new DateTimeFormatterBuilder()
+                .appendOptional(DATE_FORMATTER_WITH_TIMEZONE)
+                .appendOptional(DATETIME_FORMATTER)
+                .toFormatter();
+
+        return LocalDate.parse(data, dateTimeFormatter);
     }
 
     @Override
     public String write(final LocalDate data) throws Exception {
-        return NFLocalDateTransformer.DATETIME_FORMATTER.print(data);
+        return DATETIME_FORMATTER.format(data);
     }
 }

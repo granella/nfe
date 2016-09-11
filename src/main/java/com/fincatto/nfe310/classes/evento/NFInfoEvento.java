@@ -2,7 +2,6 @@ package com.fincatto.nfe310.classes.evento;
 
 import java.math.BigDecimal;
 
-import org.joda.time.DateTime;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 
@@ -12,6 +11,7 @@ import com.fincatto.nfe310.classes.NFUnidadeFederativa;
 import com.fincatto.nfe310.validadores.BigDecimalParser;
 import com.fincatto.nfe310.validadores.IntegerValidador;
 import com.fincatto.nfe310.validadores.StringValidador;
+import java.time.ZonedDateTime;
 
 public class NFInfoEvento extends NFBase {
 
@@ -34,7 +34,7 @@ public class NFInfoEvento extends NFBase {
     private String chave;
 
     @Element(name = "dhEvento", required = true)
-    private DateTime dataHoraEvento;
+    private ZonedDateTime dataHoraEvento;
 
     @Element(name = "tpEvento", required = true)
     private String codigoEvento;
@@ -106,11 +106,11 @@ public class NFInfoEvento extends NFBase {
         this.chave = chave;
     }
 
-    public DateTime getDataHoraEvento() {
+    public ZonedDateTime getDataHoraEvento() {
         return this.dataHoraEvento;
     }
 
-    public void setDataHoraEvento(final DateTime dataHoraEvento) {
+    public void setDataHoraEvento(final ZonedDateTime dataHoraEvento) {
         this.dataHoraEvento = dataHoraEvento;
     }
 

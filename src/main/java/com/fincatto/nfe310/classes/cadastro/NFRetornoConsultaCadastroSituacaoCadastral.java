@@ -1,10 +1,10 @@
 package com.fincatto.nfe310.classes.cadastro;
 
-import org.joda.time.LocalDate;
 import org.simpleframework.xml.Element;
 
 import com.fincatto.nfe310.classes.NFBase;
 import com.fincatto.nfe310.classes.NFUnidadeFederativa;
+import java.time.LocalDate;
 
 public class NFRetornoConsultaCadastroSituacaoCadastral extends NFBase {
 

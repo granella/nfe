@@ -2,7 +2,6 @@ package com.fincatto.nfe310.classes.nota;
 
 import java.util.List;
 
-import org.joda.time.DateTime;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 
@@ -19,9 +18,10 @@ import com.fincatto.nfe310.classes.NFUnidadeFederativa;
 import com.fincatto.nfe310.validadores.IntegerValidador;
 import com.fincatto.nfe310.validadores.ListValidador;
 import com.fincatto.nfe310.validadores.StringValidador;
+import java.time.ZonedDateTime;
 
 public class NFNotaInfoIdentificacao extends NFBase {
-	
+
     @Element(name = "cUF", required = true)
     private NFUnidadeFederativa uf;
 
@@ -44,10 +44,10 @@ public class NFNotaInfoIdentificacao extends NFBase {
     private String numeroNota;
 
     @Element(name = "dhEmi", required = true)
-    private DateTime dataHoraEmissao;
+    private ZonedDateTime dataHoraEmissao;
 
     @Element(name = "dhSaiEnt", required = false)
-    private DateTime dataHoraSaidaOuEntrada;
+    private ZonedDateTime dataHoraSaidaOuEntrada;
 
     @Element(name = "tpNF", required = true)
     private NFTipo tipo;
@@ -86,7 +86,7 @@ public class NFNotaInfoIdentificacao extends NFBase {
     private String versaoEmissor;
 
     @Element(name = "dhCont", required = false)
-    private DateTime dataHoraContigencia;
+    private ZonedDateTime dataHoraContigencia;
 
     @Element(name = "xJust", required = false)
     private String justificativaEntradaContingencia;
@@ -126,11 +126,11 @@ public class NFNotaInfoIdentificacao extends NFBase {
         this.numeroNota = numeroNota;
     }
 
-    public void setDataHoraEmissao(final DateTime dataEmissao) {
+    public void setDataHoraEmissao(final ZonedDateTime dataEmissao) {
         this.dataHoraEmissao = dataEmissao;
     }
 
-    public void setDataHoraSaidaOuEntrada(final DateTime dataHoraSaidaOuEntrada) {
+    public void setDataHoraSaidaOuEntrada(final ZonedDateTime dataHoraSaidaOuEntrada) {
         this.dataHoraSaidaOuEntrada = dataHoraSaidaOuEntrada;
     }
 
@@ -178,7 +178,7 @@ public class NFNotaInfoIdentificacao extends NFBase {
         this.versaoEmissor = versaoEmissor;
     }
 
-    public void setDataHoraContigencia(final DateTime dataHoraContigencia) {
+    public void setDataHoraContigencia(final ZonedDateTime dataHoraContigencia) {
         this.dataHoraContigencia = dataHoraContigencia;
     }
 
@@ -227,11 +227,11 @@ public class NFNotaInfoIdentificacao extends NFBase {
         return this.numeroNota;
     }
 
-    public DateTime getDataHoraEmissao() {
+    public ZonedDateTime getDataHoraEmissao() {
         return this.dataHoraEmissao;
     }
 
-    public DateTime getDataHoraSaidaOuEntrada() {
+    public ZonedDateTime getDataHoraSaidaOuEntrada() {
         return this.dataHoraSaidaOuEntrada;
     }
 
@@ -283,7 +283,7 @@ public class NFNotaInfoIdentificacao extends NFBase {
         return this.versaoEmissor;
     }
 
-    public DateTime getDataHoraContigencia() {
+    public ZonedDateTime getDataHoraContigencia() {
         return this.dataHoraContigencia;
     }
 

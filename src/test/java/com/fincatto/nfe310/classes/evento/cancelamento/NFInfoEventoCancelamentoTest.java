@@ -2,13 +2,15 @@ package com.fincatto.nfe310.classes.evento.cancelamento;
 
 import java.math.BigDecimal;
 
-import org.joda.time.DateTime;
 import org.junit.Assert;
 import org.junit.Test;
 
 import com.fincatto.nfe310.FabricaDeObjetosFake;
 import com.fincatto.nfe310.classes.NFAmbiente;
 import com.fincatto.nfe310.classes.NFUnidadeFederativa;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 public class NFInfoEventoCancelamentoTest {
 
@@ -47,7 +49,7 @@ public class NFInfoEventoCancelamentoTest {
     @Test
     public void deveObterDataHoraEventoComoFoiSetado() {
         final NFInfoEventoCancelamento infoEventoCancelamento = new NFInfoEventoCancelamento();
-        final DateTime dataHoraEvento = new DateTime(2010, 10, 10, 10, 10, 10);
+        final ZonedDateTime dataHoraEvento = LocalDateTime.of(2010, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo"));
         infoEventoCancelamento.setDataHoraEvento(dataHoraEvento);
         Assert.assertEquals(dataHoraEvento, infoEventoCancelamento.getDataHoraEvento());
     }

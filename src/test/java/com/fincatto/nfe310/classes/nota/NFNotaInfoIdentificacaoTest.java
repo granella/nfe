@@ -10,7 +10,8 @@ import com.fincatto.nfe310.classes.NFTipo;
 import com.fincatto.nfe310.classes.NFTipoEmissao;
 import com.fincatto.nfe310.classes.NFTipoImpressao;
 import com.fincatto.nfe310.classes.NFUnidadeFederativa;
-import org.joda.time.DateTime;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -104,8 +105,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -120,7 +121,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -133,8 +134,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -149,7 +150,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setIndicadorPresencaComprador(NFIndicadorPresencaComprador.NAO_APLICA);
@@ -162,8 +163,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -178,7 +179,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
         identificacao.setIndicadorPresencaComprador(NFIndicadorPresencaComprador.NAO_APLICA);
@@ -190,8 +191,8 @@ public class NFNotaInfoIdentificacaoTest {
         final NFNotaInfoIdentificacao identificacao = new NFNotaInfoIdentificacao();
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -206,7 +207,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -219,8 +220,8 @@ public class NFNotaInfoIdentificacaoTest {
         final NFNotaInfoIdentificacao identificacao = new NFNotaInfoIdentificacao();
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -235,7 +236,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -248,8 +249,8 @@ public class NFNotaInfoIdentificacaoTest {
         final NFNotaInfoIdentificacao identificacao = new NFNotaInfoIdentificacao();
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -264,7 +265,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -278,7 +279,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -293,7 +294,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -307,7 +308,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -322,7 +323,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -336,8 +337,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
         identificacao.setModelo(NFModelo.NFE);
@@ -351,7 +352,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -365,8 +366,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
         identificacao.setModelo(NFModelo.NFE);
@@ -380,7 +381,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -394,8 +395,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setModelo(NFModelo.NFE);
@@ -409,7 +410,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -423,8 +424,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -438,7 +439,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -452,8 +453,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -467,7 +468,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -481,8 +482,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -496,7 +497,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -510,8 +511,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -525,7 +526,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -539,8 +540,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -554,7 +555,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -568,8 +569,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -583,7 +584,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -597,8 +598,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -612,7 +613,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -626,8 +627,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -641,7 +642,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -655,8 +656,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -670,7 +671,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoEmissao(NFTipoEmissao.EMISSAO_NORMAL);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -684,8 +685,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -699,7 +700,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoEmissao(NFTipoEmissao.EMISSAO_NORMAL);
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -713,8 +714,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -728,7 +729,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoEmissao(NFTipoEmissao.EMISSAO_NORMAL);
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setJustificativaEntradaContingencia("b1Aj7VBU5I0LDthlrWTk73otsFXSVbiNYyAgGZjLYT0pftpjhGzQEAtnolQoAEB3omnxNq8am4iMqwwviuaXRHjiYWY7YaPITlDN7cDN9obnhEqhDhkgKphRBY5frTfD6unwTB4w7j6hpY2zNNzWwbNJzPGgDmQ8WhBDnpq1fQOilrcDspY7SGkNDfjxpGTQyNSNsmF4B2uHHLhGhhxG2qVq2bFUvHFqSL8atQAuYpyn3wplW21v88N96PnF0MEV");
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
@@ -742,8 +743,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -771,8 +772,8 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setAmbiente(NFAmbiente.PRODUCAO);
         identificacao.setCodigoMunicipio("1612675");
         identificacao.setCodigoRandomico("99999999");
-        identificacao.setDataHoraEmissao(new DateTime(2010, 10, 27, 10, 10, 10));
-        identificacao.setDataHoraSaidaOuEntrada(new DateTime(2013, 9, 24, 10, 10, 10));
+        identificacao.setDataHoraEmissao(LocalDateTime.of(2010, 10, 27, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
+        identificacao.setDataHoraSaidaOuEntrada(LocalDateTime.of(2013, 9, 24, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setDigitoVerificador(8);
         identificacao.setFinalidade(NFFinalidade.NORMAL);
         identificacao.setFormaPagamento(NFFormaPagamentoPrazo.A_PRAZO);
@@ -787,7 +788,7 @@ public class NFNotaInfoIdentificacaoTest {
         identificacao.setTipoImpressao(NFTipoImpressao.DANFE_NORMAL_PAISAGEM);
         identificacao.setUf(NFUnidadeFederativa.SC);
         identificacao.setVersaoEmissor("532ng7VURPgovC5BYaZy");
-        identificacao.setDataHoraContigencia(new DateTime(2014, 10, 10, 10, 10, 10));
+        identificacao.setDataHoraContigencia(LocalDateTime.of(2014, 10, 10, 10, 10, 10).atZone(ZoneId.of("America/Sao_Paulo")));
         identificacao.setIdentificadorLocalDestinoOperacao(NFIdentificadorLocalDestinoOperacao.OPERACAO_INTERNA);
         identificacao.setOperacaoConsumidorFinal(NFOperacaoConsumidorFinal.SIM);
         identificacao.setIndicadorPresencaComprador(NFIndicadorPresencaComprador.NAO_APLICA);

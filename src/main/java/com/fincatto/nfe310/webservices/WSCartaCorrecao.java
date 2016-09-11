@@ -19,7 +19,6 @@ import com.fincatto.nfe310.webservices.gerado.RecepcaoEventoStub.NfeDadosMsg;
 import com.fincatto.nfe310.webservices.gerado.RecepcaoEventoStub.NfeRecepcaoEventoResult;
 import org.apache.axiom.om.OMElement;
 import org.apache.axiom.om.util.AXIOMUtil;
-import org.joda.time.DateTime;
 import org.simpleframework.xml.core.Persister;
 import org.simpleframework.xml.stream.Format;
 import org.slf4j.Logger;
@@ -28,9 +27,12 @@ import org.slf4j.LoggerFactory;
 import javax.xml.stream.XMLStreamException;
 import java.math.BigDecimal;
 import java.rmi.RemoteException;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Collections;
 
 class WSCartaCorrecao {
+
     private static final BigDecimal VERSAO_LEIAUTE = new BigDecimal("1.00");
     private static final String EVENTO_CODIGO = "110110";
     private static final String EVENTO_DESCRICAO = "Carta de Correcao";
@@ -95,7 +97,7 @@ class WSCartaCorrecao {
         infoEvento.setDadosEvento(cartaCorrecao);
         infoEvento.setChave(chaveAcesso);
         infoEvento.setCnpj(chaveParser.getCnpjEmitente());
-        infoEvento.setDataHoraEvento(DateTime.now());
+        infoEvento.setDataHoraEvento(LocalDateTime.now().atZone(ZoneId.of("America/Sao_Paulo")));
         infoEvento.setId(String.format("ID%s%s0%s", WSCartaCorrecao.EVENTO_CODIGO, chaveAcesso, numeroSequencialEvento));
         infoEvento.setNumeroSequencialEvento(numeroSequencialEvento);
         infoEvento.setOrgao(chaveParser.getNFUnidadeFederativa());
@@ -108,7 +110,7 @@ class WSCartaCorrecao {
 
         final NFEnviaEventoCartaCorrecao enviaEvento = new NFEnviaEventoCartaCorrecao();
         enviaEvento.setEvento(Collections.singletonList(evento));
-        enviaEvento.setIdLote(Long.toString(DateTime.now().getMillis()));
+        enviaEvento.setIdLote(Long.toString(LocalDateTime.now().atZone(ZoneId.systemDefault()).toEpochSecond()));
         enviaEvento.setVersao(WSCartaCorrecao.VERSAO_LEIAUTE);
         return enviaEvento;
     }

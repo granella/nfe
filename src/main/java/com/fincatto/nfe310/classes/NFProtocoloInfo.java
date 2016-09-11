@@ -1,9 +1,12 @@
 package com.fincatto.nfe310.classes;
 
-import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.format.DateTimeParseException;
+import java.time.temporal.Temporal;
 
-import org.joda.time.LocalDateTime;
-import org.joda.time.format.DateTimeFormat;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 
@@ -80,11 +83,11 @@ public class NFProtocoloInfo extends NFBase {
         return this.chave;
     }
 
-    public LocalDateTime getDataRecebimento() throws Exception {
+    public Temporal getDataRecebimento() throws DateTimeParseException {
         try {
-            return LocalDateTime.parse(this.dataRecebimento, DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss"));
-        } catch (final Exception e) {
-            return LocalDateTime.fromDateFields(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX").parse(this.dataRecebimento));
+            return LocalDateTime.parse(dataRecebimento, DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+        } catch (DateTimeParseException ex) {
+            return ZonedDateTime.parse(dataRecebimento, DateTimeFormatter.ISO_OFFSET_DATE_TIME);
         }
     }
 

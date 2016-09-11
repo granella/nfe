@@ -2,7 +2,6 @@ package com.fincatto.nfe310.classes.nota.consulta;
 
 import java.util.List;
 
-import org.joda.time.LocalDateTime;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
@@ -14,6 +13,7 @@ import com.fincatto.nfe310.classes.NFBase;
 import com.fincatto.nfe310.classes.NFProtocolo;
 import com.fincatto.nfe310.classes.NFUnidadeFederativa;
 import com.fincatto.nfe310.classes.evento.cancelamento.NFRetornoCancelamento;
+import java.time.LocalDateTime;
 
 @Root(name = "retConsSitNFe", strict = false)
 @Namespace(reference = "http://www.portalfiscal.inf.br/nfe")

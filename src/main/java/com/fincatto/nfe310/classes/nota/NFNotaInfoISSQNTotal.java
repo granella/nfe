@@ -2,13 +2,14 @@ package com.fincatto.nfe310.classes.nota;
 
 import java.math.BigDecimal;
 
-import org.joda.time.LocalDate;
 import org.simpleframework.xml.Element;
 
 import com.fincatto.nfe310.classes.NFBase;
 import com.fincatto.nfe310.validadores.BigDecimalParser;
+import java.time.LocalDate;
 
 public class NFNotaInfoISSQNTotal extends NFBase {
+
     @Element(name = "vServ", required = false)
     private String valorTotalServicosSobNaoIncidenciaNaoTributadosICMS;
 

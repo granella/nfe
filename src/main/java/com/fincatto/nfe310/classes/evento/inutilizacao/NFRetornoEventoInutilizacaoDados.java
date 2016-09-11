@@ -1,14 +1,15 @@
 package com.fincatto.nfe310.classes.evento.inutilizacao;
 
-import org.joda.time.LocalDateTime;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 
 import com.fincatto.nfe310.classes.NFAmbiente;
 import com.fincatto.nfe310.classes.NFBase;
 import com.fincatto.nfe310.classes.NFUnidadeFederativa;
+import java.time.LocalDateTime;
 
 public class NFRetornoEventoInutilizacaoDados extends NFBase {
+
     @Attribute(name = "Id", required = false)
     private String identificador;
 

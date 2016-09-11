@@ -1,9 +1,5 @@
 package com.fincatto.nfe310.transformers;
 
-import org.joda.time.DateTime;
-import org.joda.time.LocalDate;
-import org.joda.time.LocalDateTime;
-import org.joda.time.LocalTime;
 import org.simpleframework.xml.transform.RegistryMatcher;
 
 import com.fincatto.nfe310.classes.NFAmbiente;
@@ -53,6 +49,10 @@ import com.fincatto.nfe310.classes.nota.NFOperacaoConsumidorFinal;
 import com.fincatto.nfe310.classes.nota.NFOperadoraCartao;
 import com.fincatto.nfe310.classes.nota.NFTipoIntegracaoPagamento;
 import com.fincatto.nfe310.classes.nota.NFViaTransporteInternacional;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZonedDateTime;
 
 public class NFRegistryMatcher extends RegistryMatcher {
 
@@ -65,7 +65,7 @@ public class NFRegistryMatcher extends RegistryMatcher {
         super.bind(LocalTime.class, new NFLocalTimeTransformer());
         super.bind(NFFinalidade.class, new NFFinalidadeTransformer());
         super.bind(NFTipoEmissao.class, new NFTipoEmissaoTransformer());
-        super.bind(DateTime.class, new NFDateTimeTransformer());
+        super.bind(ZonedDateTime.class, new NFZonedDateTimeTransformer());
         super.bind(LocalDateTime.class, new NFLocalDateTimeTransformer());
         super.bind(NFTipoImpressao.class, new NFTipoImpressaoTransformer());
         super.bind(NFOrigemProcesso.class, new NFOrigemProcessoTransformer());
